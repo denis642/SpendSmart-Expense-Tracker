@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             let result;
-            try {
-                result = await response.json(); // Attempt to parse JSON
-            } catch (e) {
-                // Handle non-JSON responses here
-                result = { message: await response.text() }; // Read response as text
+            const contentType = response.headers.get('content-type');
+
+            if (contentType && contentType.includes('application/json')) {
+                result = await response.json(); // Parse JSON response
+            } else {
+                result = { message: await response.text() }; // Parse as text
             }
 
             if (response.ok) {
