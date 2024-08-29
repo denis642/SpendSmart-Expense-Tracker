@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <script>
+        // Function to handle logout
+        function handleLogout() {
+            // Clear the token from local storage or cookies
+            localStorage.removeItem('authToken');
+            
+            // Redirect to the index page
+            window.location.href = 'index.html';
+        }
+
+        // Call handleLogout function when the page loads
+        window.onload = handleLogout;
+    </script>
+</head>
+<body>
+    <!-- Display a message or loader while logging out -->
+    <p>Logging you out...</p>
+</body>
+</html>

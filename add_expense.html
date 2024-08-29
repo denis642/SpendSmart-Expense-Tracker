@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="more.html">About</a></li>
+                <li><a href="manage_expenses.html">Manage Expenses</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="add-expense-section">
+            <h2>Add Expense</h2>
+            <form id="add-category-form">
+                <h3>Add Category</h3>
+                <input type="text" id="category" placeholder="Category" required>
+                <button type="submit">Add Category</button>
+            </form>
+            <form id="add-expense-form">
+                <h3>Add Expense</h3>
+                <select id="category-select" required>
+                    <option value="">Select Category</option>
+                </select>
+                <input type="text" id="expense-description" placeholder="Description" required>
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <input type="date" id="expense-date" required>
+                <button type="submit">Add Expense</button>
+            </form>
+            <button onclick="window.location.href='manage_expenses.html'">View Expenses</button>
+        </section>
+    </main>
+
+    <script src="add_expense.js"></script>
+    <footer>
+        <p>&copy; 2024 SpendSmart Expense Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>

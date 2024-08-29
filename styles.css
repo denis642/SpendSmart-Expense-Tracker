@@ -1,0 +1,398 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; 
+}
+.main-content {
+    flex: 1;
+}
+
+/* Index page background */
+body.index-background {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Welcome section styles */
+main {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; 
+}
+
+.welcome-section{
+    padding-top: 150px;
+    margin-top: auto;
+}
+.welcome-section h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    position:relative;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.welcome-section p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+button#get-started-btn {
+    padding: 0.75rem 2.5rem;
+    font-size: 1.25rem;
+    color: white;
+    background-color: #3a3dbe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#get-started-btn:hover {
+    background-color: #3337a8;
+}
+
+/* Add Expense page styles */
+body:not(.index-background) {
+    background-color: #f5f5f5;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; 
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom:auto;
+}
+body {
+    padding-top: 10px; 
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main.add-expense-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.add-expense-section {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.add-expense-section h2, .add-expense-section h3 {
+    margin-bottom: 1rem;
+}
+
+.add-expense-section form {
+    margin-bottom: 2rem;
+}
+
+.add-expense-section input, .add-expense-section select, .add-expense-section button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-expense-section button {
+    background-color: #3a3dbe; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-expense-section button:hover {
+    background-color: #3337a8; 
+}
+
+  /* Edit Button Style */
+.edit-button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #45a049; 
+}
+
+/* Delete Button Style */
+.delete-button {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e53935; 
+}
+/* Footer Styles */
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px 0; 
+    position: relative; 
+    width: 100%; 
+     margin-top: auto;
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
+.about-section {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+
+.score-card-item {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.score-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-dots {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.menu-content button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.menu-content button:hover {
+    background-color: #f5f5f5;
+}
+.testimonials-section {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial {
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial p:last-child {
+    font-weight: bold;
+    color: #3a3dbe;
+}
+.features-section {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature {
+    display: inline-block;
+    width: 30%;
+    margin: 1rem;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #3a3dbe;
+    margin-bottom: 0.5rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333; 
+    color: #fff; 
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display:inline-flex;
+    list-style: none;
+    padding: 0;
+   
+}
+
+.social-media li {
+    margin-right: 10px;
+}
+
+.social-media li a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); 
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444; 
+}

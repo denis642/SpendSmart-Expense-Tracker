@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Expenses</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .score-card {
+            margin-bottom: 20px;
+        }
+        .score-card-item {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .charts {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        select {
+            margin-bottom: 10px;
+        }
+        /* Add CSS for chart size */
+        .chart-container {
+            display: inline-block;
+            width: 300px;  /* Set desired width */
+            height: 300px; /* Set desired height */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="more.html">About</a></li>
+                <li><a href="add_expense.html">Add Expense</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="score-card">
+            <h2>Expense Overview</h2>
+            <div id="score-card-content">
+                <!-- Score Card Content Will Be Loaded Here -->
+                 
+            </div>
+        </section>
+        <section class="charts">
+            <h2>Expense Breakdown</h2>
+            <div class="chart-container">
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </section>
+        <section class="expenses">
+            <h2>All Expenses</h2>
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <!-- Category options will be loaded here dynamically -->
+            </select>
+            <table id="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expenses Will Be Loaded Here -->
+                </tbody>
+            </table>
+            <div id="total-expenses">
+                <!-- Total Expenses Will Be Displayed Here -->
+            </div>
+        </section>
+    </main>
+    <script src="manage_expenses.js"></script>
+    <footer>
+        <p>&copy; 2024 SpendSmart Expense Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
