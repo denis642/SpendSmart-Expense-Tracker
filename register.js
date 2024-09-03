@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('https://spend-smart-expense-tracker.vercel.app/auth/register', {
+            const response = await fetch('http://localhost:9000/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -18,14 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify({ username, email, password }),
             });
 
-            let result;
-            const contentType = response.headers.get('content-type');
-
-            if (contentType && contentType.includes('application/json')) {
-                result = await response.json(); // Parse JSON response
-            } else {
-                result = { message: await response.text() }; // Parse as text
-            }
+            const result = await response.json();
 
             if (response.ok) {
                 console.log('Registration successful:', result.message);
