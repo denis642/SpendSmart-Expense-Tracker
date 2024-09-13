@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('http://localhost:9000/auth/login', {
+            const response = await fetch('https://spend-smart-expense-tracker.vercel.app/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

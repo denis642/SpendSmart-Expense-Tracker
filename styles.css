@@ -396,3 +396,63 @@ footer p {
     padding-top: 10px;
     border-top: 1px solid #444; 
 }
+
+/* Ensure the element has a higher z-index than its siblings */
+.overlay {
+    position: absolute;
+    z-index: 10; /* Higher z-index */
+}
+
+/* Default styles (mobile-first) */
+
+/* Mobile screens (up to 600px) */
+@media only screen and (max-width: 600px) {
+    /* Mobile styles */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .header {
+        font-size: 18px;
+    }
+    
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+}
+
+/* Tablets (between 601px and 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Tablet styles */
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .header {
+        font-size: 24px;
+    }
+    
+    .sidebar {
+        display: block; /* Show sidebar on tablets */
+    }
+}
+
+/* Laptops and desktops (1025px and up) */
+@media only screen and (min-width: 1025px) {
+    /* Desktop styles */
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+    
+    .header {
+        font-size: 28px;
+    }
+    
+    .sidebar {
+        display: block; /* Ensure sidebar is visible on desktops */
+    }
+}
+

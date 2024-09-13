@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     async function deleteExpense(id) {
         if (confirm('Are you sure you want to delete this expense?')) {
             try {
-                const response = await fetch(`http://localhost:9000/expense/${id}`, {
+                const response = await fetch(`https://spend-smart-expense-tracker.vercel.app/expense/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': 'Bearer ' + token
