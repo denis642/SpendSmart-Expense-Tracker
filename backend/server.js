@@ -13,7 +13,10 @@ const port = process.env.PORT || 9000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://spend-smart-expense-tracker.vercel.app' // Match your frontend URL
+}));
+
 
 // MySQL Connection
 const db = mysql.createPool({
